@@ -1,0 +1,21 @@
+// Directions: Have the function LetterCapitalize(str) take the str parameter being passed and 
+// capitalize the first letter of each word. Words will be separated by only one space. 
+
+function LetterCapitalize(str) { 
+  	var wordList = str.split(" ");
+  	var finalStr = "";
+	var word = "";
+  
+  	for (var i = 0; i < wordList.length; i++){
+      var code = wordList[i].charCodeAt(0);
+	  if ( ((code >= 65) && (code <= 90)) || ((code >= 97) && (code <= 122)) ) {
+      	word = (wordList[i].charAt(0).toUpperCase() + wordList[i].slice(1,wordList[i].length));
+      }
+      else{
+        word = wordList[i];
+      }
+      finalStr += (word + " " );
+    }
+  
+  return finalStr
+};
